@@ -1,17 +1,17 @@
 const prompt=require("prompt-sync")({sigint:true}); 
 
 const Error_enumobj = {
+	A_BIT_DIFFERENT: "A_BIT_DIFFERENT", 
+    INFINITY: "INFINITY", 
+    ZERO: "ZERO", 
+    VERY_DIFFERENT: "VERY_DIFFERENT"
+}
+
+const Result_enumobj = {
 	FP_ROUNDING: "FP_ROUNDING",
 	FP_OVERFLOW: "FP_OVERFLOW",
 	FP_UNDERFLOW: "FP_UNDERFLOW",
 	INT_OVERFLOW: "INT_OVERFLOW"
-}
-
-const Result_enumobj = {
-    A_BIT_DIFFERENT: "A_BIT_DIFFERENT", 
-    INFINITY: "INFINITY", 
-    ZERO: "ZERO", 
-    VERY_DIFFERENT: "VERY_DIFFERENT"
 }
 
 function error2Result(err){
