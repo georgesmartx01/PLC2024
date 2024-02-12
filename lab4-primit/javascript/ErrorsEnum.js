@@ -16,17 +16,17 @@ const Result_enumobj = {
 
 function error2Result(err){
     switch (err) {
-	case Error_enumobj.FP_ROUNDING:
-	 return Result_enumobj.A_BIT_DIFFERENT;
+	case Error_enumobj.A_BIT_DIFFERENT:
+	 return Result_enumobj.FP_ROUNDING;
 	break;
-	case Error_enumobj.FP_OVERFLOW:
-	    return Result_enumobj.INFINITY;
+	case Error_enumobj.INFINITY:
+	    return Result_enumobj.FP_OVERFLOW;
 	break;
-	case Error_enumobj.FP_UNDERFLOW:
-	    return Result_enumobj.ZERO;
+	case Error_enumobj.ZERO:
+	    return Result_enumobj.FP_UNDERFLOW;
 	break;
-	case Error_enumobj.INT_OVERFLOW:
-	    return Result_enumobj.VERY_DIFFERENT;
+	case Error_enumobj.VERY_DIFFERENT:
+	    return Result_enumobj.INT_OVERFLOW;
 	break;
 	default:
 		return 'Invalid Error value';
